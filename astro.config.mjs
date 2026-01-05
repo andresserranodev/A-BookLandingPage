@@ -4,7 +4,8 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  base: "/book_landing_page",
+  site: process.env.NODE_ENV === 'production' ? "https://andresserranodev.github.io" : undefined,
+  base: process.env.NODE_ENV === 'production' ? "/A-BookLandingPage" : undefined,
   integrations: [react(), tailwind()],
 
 });

@@ -62,4 +62,4 @@ The site uses URL-based localization:
 
 ## Deployment
 
-The project is configured for GitHub Pages with the base URL `/book_landing_page`. If deploying to a different environment, update the `base` property in `astro.config.mjs`.
+The project is configured for GitHub Pages with the base URL `/A-BookLandingPage`. If deploying to a different environment, update the `base` property in `astro.config.mjs`.
