@@ -1,8 +1,8 @@
 import heroDesktop from "@/assets/hero_cotopaxi_desktop.webp";
 import heroMobile from "@/assets/hero_cotopaxi_mobile.webp";
 import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/lib/LanguageContext";
 import { SITE_CONFIG } from "@/lib/constants";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function HeroSection() {
   const { t } = useLanguage();
@@ -16,9 +16,10 @@ export default function HeroSection() {
         <source media="(min-width: 768px)" srcSet={heroDesktop.src} />
         <img
           src={heroMobile.src}
-          alt=""
+          alt="Andrés en su moto frente al volcán Cotopaxi durante su viaje desde Colombia hasta la Patagonia - Libro Un Andrés Más"
           className="h-full w-full object-cover object-center"
-          aria-hidden="true"
+          loading="eager"
+          fetchPriority="high"
         />
       </picture>
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />

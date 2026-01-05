@@ -11,12 +11,12 @@ import {
 const PREVIEW_IMAGES = [
   {
     sources: bookCover,
-    alt: "Book Cover - Un Andrés Más",
+    alt: "Portada del libro Un Andrés Más - Viaje en moto por Sudamérica desde Colombia hasta la Patagonia",
     label: "Portada",
   },
   {
     sources: epubPreview,
-    alt: "Ebook Preview - Un Andrés Más",
+    alt: "Vista interior del libro Un Andrés Más - Aventura en moto por la Patagonia y Sudamérica",
     label: "Vista interior",
   },
 ];

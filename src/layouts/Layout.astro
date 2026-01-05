@@ -3,10 +3,10 @@ import "@/index.css";
 
 interface Props {
 	title: string;
-	lang?: "en" | "es";
+	lang?: "es" | "en";
 }
 
-const { title, lang = "en" } = Astro.props;
+const { title, lang = "es" } = Astro.props;
 const base = import.meta.env.BASE_URL === "/" ? "/" : `${import.meta.env.BASE_URL}/`;
 ---
 
@@ -14,7 +14,6 @@ const base = import.meta.env.BASE_URL === "/" ? "/" : `${import.meta.env.BASE_UR
 <html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="A generic description for now" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="apple-touch-icon" sizes="180x180" href={`${base}apple-touch-icon.png`} />
 		<link rel="icon" type="image/png" sizes="32x32" href={`${base}favicon-32x32.png`} />
@@ -23,6 +22,17 @@ const base = import.meta.env.BASE_URL === "/" ? "/" : `${import.meta.env.BASE_UR
 		<link rel="icon" type="image/x-icon" href={`${base}favicon.ico`} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<meta name="description" content={lang === "es" 
+			? "Libro 'Un Andrés Más': 11.000 km de aventura por Sudamérica. Aprovecha el precio de lanzamiento y recibe tu ejemplar dedicado. ¡Cantidades limitadas!" 
+			: "Book 'Un Andrés Más': 11,000 km adventure through South America. Get your signed copy at a special launch price. Limited quantities!"} />
+		<meta property="og:title" content={lang === "es" ? "Un Andrés Más: Preventa Oficial del Libro" : "Un Andrés Más: Official Book Pre-sale"} />
+		<meta property="og:description" content={lang === "es" 
+			? "Acompáñame en esta aventura de Colombia a la Patagonia. Reserva tu copia firmada y con descuento exclusivo aquí."
+			: "Join me on this adventure from Colombia to Patagonia. Reserve your signed copy with an exclusive discount here."} />
+		<meta property="og:image" content="https://bit.ly/URL_DE_TU_IMAGEN_DE_PORTADA.jpg" />
+		<meta property="og:url" content="https://bit.ly/LibroAndresMas" />
+		<meta property="og:type" content="book" />   
+		<meta property="og:locale" content={lang === "es" ? "es_CO" : "en_US"} />
 	</head>
 	<body>
 		<slot />
