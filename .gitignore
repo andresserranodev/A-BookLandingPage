@@ -1,0 +1,12 @@
+node_modules
+dist
+
+# Linting/Formatting cache
+.eslintcache
+.prettierrc.cache
+coverage/
+coverage
+
+# OS files
+.DS_Store
+**/.DS_Store

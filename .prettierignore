@@ -1,0 +1,30 @@
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+coverage
+build
+
+# Git
+.git
+
+# Environment files
+.env
+.env.*
+
+# Database migrations (auto-generated)
+migrations
+
+# Package lock files
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Config files (may have specific formatting)
+*.config.js
+*.config.cjs
+*.config.ts
+
+# Test snapshots
+**/__snapshots__
