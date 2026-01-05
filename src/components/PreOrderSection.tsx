@@ -2,9 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Section, SectionHeading } from "@/components/ui/section";
 import { useLanguage } from "@/hooks/useLanguage";
 import { SITE_CONFIG } from "@/lib/constants";
+import type { Language } from "@/lib/translations";
 
-export default function PreOrderSection() {
-  const { t } = useLanguage();
+interface PreOrderSectionProps {
+  lang?: Language;
+}
+
+export default function PreOrderSection({ lang }: PreOrderSectionProps) {
+  const { t } = useLanguage(lang);
 
   return (
     <Section

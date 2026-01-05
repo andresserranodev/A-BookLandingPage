@@ -2,9 +2,14 @@ import authorPhotos from "@/assets/author_photo.webp";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Section, SectionHeading } from "@/components/ui/section";
 import { useLanguage } from "@/hooks/useLanguage";
+import type { Language } from "@/lib/translations";
 
-export default function AboutAuthorSection() {
-  const { t } = useLanguage();
+interface AboutAuthorSectionProps {
+  lang?: Language;
+}
+
+export default function AboutAuthorSection({ lang }: AboutAuthorSectionProps) {
+  const { t } = useLanguage(lang);
 
   return (
     <Section

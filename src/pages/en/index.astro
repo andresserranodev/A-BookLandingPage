@@ -10,13 +10,13 @@ import Footer from '@/components/Footer';
 
 <Layout title="Un Andrés Más | Book Launch" lang="en">
 	<div class="min-h-screen bg-background">
-		<Navigation client:load />
+		<Navigation client:load lang="en" />
 		<main>
-			<HeroSection client:load />
-			<AboutBookSection client:visible />
-			<AboutAuthorSection client:visible />
-			<PreOrderSection client:visible />
+			<HeroSection client:load lang="en" />
+			<AboutBookSection client:visible lang="en" />
+			<AboutAuthorSection client:visible lang="en" />
+			<PreOrderSection client:visible lang="en" />
 		</main>
-		<Footer client:idle />
+		<Footer client:idle lang="en" />
 	</div>
 </Layout>

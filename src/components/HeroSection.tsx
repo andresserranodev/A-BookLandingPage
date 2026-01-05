@@ -3,9 +3,14 @@ import heroMobile from "@/assets/hero_cotopaxi_mobile.webp";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
 import { SITE_CONFIG } from "@/lib/constants";
+import type { Language } from "@/lib/translations";
 
-export default function HeroSection() {
-  const { t } = useLanguage();
+interface HeroSectionProps {
+  lang?: Language;
+}
+
+export default function HeroSection({ lang }: HeroSectionProps) {
+  const { t } = useLanguage(lang);
 
   return (
     <section

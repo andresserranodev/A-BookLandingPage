@@ -1,12 +1,17 @@
 import { useLanguage } from "@/hooks/useLanguage";
+import type { Language } from "@/lib/translations";
 import { cn } from "@/lib/utils";
 
 interface LanguageToggleProps {
   className?: string;
+  lang?: Language;
 }
 
-export default function LanguageToggle({ className }: LanguageToggleProps) {
-  const { language } = useLanguage();
+export default function LanguageToggle({
+  className,
+  lang,
+}: LanguageToggleProps) {
+  const { language } = useLanguage(lang);
 
   // Base path handling for GitHub Pages or root
   const base = import.meta.env.BASE_URL === "/" ? "" : import.meta.env.BASE_URL;

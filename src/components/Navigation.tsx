@@ -5,11 +5,16 @@ import { Button } from "@/components/ui/button";
 import { useScrollToSection } from "@/hooks/use-scroll-to-section";
 import { useLanguage } from "@/hooks/useLanguage";
 import { SITE_CONFIG, NAV_SECTIONS } from "@/lib/constants";
+import type { Language } from "@/lib/translations";
 
-export default function Navigation() {
+interface NavigationProps {
+  lang?: Language;
+}
+
+export default function Navigation({ lang }: NavigationProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage(lang);
   const { scrollToSection: scrollTo, scrollToTop } = useScrollToSection();
 
   useEffect(() => {
@@ -67,6 +72,7 @@ export default function Navigation() {
               </button>
             ))}
             <LanguageToggle
+              lang={language}
               className={
                 isScrolled
                   ? ""
@@ -77,6 +83,7 @@ export default function Navigation() {
 
           <div className="flex items-center gap-2 md:hidden">
             <LanguageToggle
+              lang={language}
               className={
                 isScrolled
                   ? ""
