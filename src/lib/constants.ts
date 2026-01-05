@@ -1,5 +1,5 @@
-import { InstagramIcon, FacebookIcon } from "@/components/icons/SocialIcons";
 import type { Language } from "./translations";
+import { InstagramIcon, FacebookIcon } from "@/components/icons/SocialIcons";
 
 export const SITE_CONFIG = {
   title: "Un Andrés Más",
