@@ -1,8 +1,8 @@
 import heroDesktop from "@/assets/hero_cotopaxi_desktop.webp";
 import heroMobile from "@/assets/hero_cotopaxi_mobile.webp";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/hooks/useLanguage";
 import { SITE_CONFIG } from "@/lib/constants";
-import { useLanguage } from "@/lib/LanguageContext";
 
 export default function HeroSection() {
   const { t } = useLanguage();

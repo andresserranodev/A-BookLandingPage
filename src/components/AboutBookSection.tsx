@@ -1,7 +1,7 @@
 import { BookPreviewCarousel } from "./BookPreviewCarousel";
 import { Section, SectionHeading } from "@/components/ui/section";
+import { useLanguage } from "@/hooks/useLanguage";
 import { JOURNEY_STATS } from "@/lib/constants";
-import { useLanguage } from "@/lib/LanguageContext";
 
 export default function AboutBookSection() {
   const { t, language } = useLanguage();

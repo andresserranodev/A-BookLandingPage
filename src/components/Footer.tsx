@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/hooks/useLanguage";
 import { SITE_CONFIG, SOCIAL_LINKS } from "@/lib/constants";
-import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Footer() {
   const { t } = useLanguage();

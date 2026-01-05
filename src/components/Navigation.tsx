@@ -3,8 +3,8 @@ import { useState, useEffect, useCallback } from "react";
 import LanguageToggle from "./LanguageToggle";
 import { Button } from "@/components/ui/button";
 import { useScrollToSection } from "@/hooks/use-scroll-to-section";
+import { useLanguage } from "@/hooks/useLanguage";
 import { SITE_CONFIG, NAV_SECTIONS } from "@/lib/constants";
-import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
