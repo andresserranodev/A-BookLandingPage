@@ -93,3 +93,10 @@ public/          # Static assets (favicon, robots.txt)
 - **Config**: `astro.config.mjs`, `tailwind.config.ts`.
 - **Package Manager**: NPM.
 - **Linting**: ESLint + Prettier.
+
+# Testing
+
+- All new features need tests
+- Tests use React Native Testing Library
+- Run tests: npm test
+- The react-native-tests skill contains our testing guidelines
