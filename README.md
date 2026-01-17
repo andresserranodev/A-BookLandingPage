@@ -57,6 +57,7 @@ npm run preview
 ## Localization
 
 The site uses URL-based localization:
+
 - **English (Default)**: `http://localhost:4321/`
 - **Spanish**: `http://localhost:4321/es`
 
