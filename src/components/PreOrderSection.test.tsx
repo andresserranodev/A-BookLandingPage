@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import PreOrderSection from "../PreOrderSection";
+import PreOrderSection from "./PreOrderSection";
 import { useLanguage } from "@/hooks/useLanguage";
 import { SITE_CONFIG } from "@/lib/constants";
 

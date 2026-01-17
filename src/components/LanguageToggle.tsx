@@ -1,4 +1,5 @@
 import { useLanguage } from "@/hooks/useLanguage";
+import { getBaseUrl } from "@/lib/env";
 import type { Language } from "@/lib/translations";
 import { cn } from "@/lib/utils";
 
@@ -14,7 +15,7 @@ export default function LanguageToggle({
   const { language } = useLanguage(lang);
 
   // Base path handling for GitHub Pages or root
-  const base = import.meta.env.BASE_URL === "/" ? "" : import.meta.env.BASE_URL;
+  const base = getBaseUrl() === "/" ? "" : getBaseUrl();
   const targetUrl = language === "es" ? `${base}/en` : `${base}/`;
 
   return (

@@ -1,5 +1,5 @@
 import { render, screen, fireEvent, act } from "@testing-library/react";
-import Navigation from "../Navigation";
+import Navigation from "./Navigation";
 import { NAV_SECTIONS, SITE_CONFIG } from "@/lib/constants";
 
 // Mock the hooks
@@ -16,7 +16,7 @@ jest.mock("@/hooks/use-scroll-to-section", () => ({
 }));
 
 // Mock LanguageToggle to simplify testing
-jest.mock("../LanguageToggle", () => {
+jest.mock("./LanguageToggle", () => {
   return function MockLanguageToggle({ className }: { className?: string }) {
     return (
       <button data-testid="button-language-toggle" className={className}>
