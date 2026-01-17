@@ -3,18 +3,7 @@ import Navigation from "../Navigation";
 import { NAV_SECTIONS, SITE_CONFIG } from "@/lib/constants";
 
 // Mock the hooks
-jest.mock("@/hooks/useLanguage", () => ({
-  useLanguage: jest.fn(() => ({
-    language: "es",
-    t: {
-      nav: {
-        aboutBook: "Sobre el Libro",
-        author: "Autor",
-        preorder: "Pre-orden",
-      },
-    },
-  })),
-}));
+jest.mock("@/hooks/useLanguage");
 
 const mockScrollToSection = jest.fn();
 const mockScrollToTop = jest.fn();

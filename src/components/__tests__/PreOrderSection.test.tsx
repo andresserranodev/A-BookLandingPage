@@ -4,20 +4,7 @@ import { useLanguage } from "@/hooks/useLanguage";
 import { SITE_CONFIG } from "@/lib/constants";
 
 // Mock the useLanguage hook
-jest.mock("@/hooks/useLanguage", () => ({
-  useLanguage: jest.fn(() => ({
-    language: "es",
-    t: {
-      preorder: {
-        heading: "Únete a la lista de espera",
-        description:
-          "Regístrate para recibir actualizaciones exclusivas y ser de los primeros en obtener tu copia cuando esté disponible.",
-        joinButton: "Unirme a la lista",
-        waitlistCount: "Más de 100 personas ya están esperando",
-      },
-    },
-  })),
-}));
+jest.mock("@/hooks/useLanguage");
 
 describe("PreOrderSection", () => {
   beforeEach(() => {
