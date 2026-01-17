@@ -1,0 +1,41 @@
+---
+import { cn } from "@/lib/utils";
+
+type MaxWidth = "max-w-2xl" | "max-w-3xl" | "max-w-6xl";
+type Background = "bg-background" | "bg-card";
+
+interface Props {
+  id: string;
+  testId: string;
+  maxWidth?: MaxWidth;
+  background?: Background;
+  centered?: boolean;
+  class?: string;
+}
+
+const {
+  id,
+  testId,
+  maxWidth = "max-w-6xl",
+  background = "bg-background",
+  centered = false,
+  class: className,
+} = Astro.props;
+---
+
+<section
+  id={id}
+  class={cn(background, "py-16 md:py-24 lg:py-32")}
+  data-testid={testId}
+>
+  <div
+    class={cn(
+      "mx-auto px-4 sm:px-6 lg:px-8",
+      maxWidth,
+      centered && "text-center",
+      className
+    )}
+  >
+    <slot />
+  </div>
+</section>

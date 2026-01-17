@@ -1,9 +1,9 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Navigation from "@/components/Navigation";
-import HeroSection from "@/components/HeroSection";
-import AboutBookSection from "@/components/AboutBookSection";
-import AboutAuthorSection from "@/components/AboutAuthorSection";
+import HeroSection from "@/components/HeroSection.astro";
+import AboutBookSection from "@/components/AboutBookSection.astro";
+import AboutAuthorSection from "@/components/AboutAuthorSection.astro";
 import PreOrderSection from "@/components/PreOrderSection";
 import Footer from "@/components/Footer";
 ---
@@ -12,9 +12,9 @@ import Footer from "@/components/Footer";
   <div class="min-h-screen bg-background">
     <Navigation client:load lang="en" />
     <main>
-      <HeroSection client:load lang="en" />
-      <AboutBookSection client:visible lang="en" />
-      <AboutAuthorSection client:visible lang="en" />
+      <HeroSection lang="en" />
+      <AboutBookSection lang="en" />
+      <AboutAuthorSection lang="en" />
       <PreOrderSection client:visible lang="en" />
     </main>
     <Footer client:idle lang="en" />

@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import heroDesktop from "@/assets/hero_cotopaxi_desktop.webp";
+import heroMobile from "@/assets/hero_cotopaxi_mobile.webp";
+import { SITE_CONFIG } from "@/lib/constants";
+import { translations, type Language } from "@/lib/translations";
+import { buttonVariants } from "@/components/ui/button";
+
+interface Props {
+  lang?: Language;
+}
+
+const { lang = "es" } = Astro.props;
+const t = translations[lang];
+---
+
+<section
+  class="relative flex min-h-[80vh] items-center justify-center overflow-hidden"
+  data-testid="section-hero"
+>
+  <picture class="absolute inset-0">
+    <source media="(min-width: 768px)" srcset={heroDesktop.src} />
+    <Image
+      src={heroMobile}
+      alt="Andrés en su moto frente al volcán Cotopaxi durante su viaje desde Colombia hasta la Patagonia - Libro Un Andrés Más"
+      class="h-full w-full object-cover object-center"
+      loading="eager"
+      fetchpriority="high"
+      widths={[640, 768, 1024, 1280, 1536]}
+      sizes="100vw"
+    />
+  </picture>
+  <div
+    class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"
+  >
+  </div>
+
+  <div class="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+    <h1
+      class="mb-4 font-serif text-5xl font-black tracking-tight text-white sm:mb-6 sm:text-6xl md:text-7xl lg:text-8xl"
+      data-testid="text-book-title"
+    >
+      {t.hero.title}
+    </h1>
+    <p
+      class="mx-auto mb-8 max-w-2xl text-lg font-medium text-white/90 sm:mb-10 sm:text-xl md:text-2xl"
+      data-testid="text-book-subtitle"
+    >
+      {t.hero.subtitle}
+    </p>
+    <a
+      href={SITE_CONFIG.preorderFormUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class={buttonVariants({ size: "lg" }) +
+        " border border-primary-border bg-primary/90 px-8 py-4 text-lg font-semibold backdrop-blur-md"}
+      data-testid="button-hero-preorder"
+    >
+      {t.hero.preorderButton}
+    </a>
+  </div>
+</section>
