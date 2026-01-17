@@ -58,8 +58,8 @@ npm run preview
 
 The site uses URL-based localization:
 
-- ** Spanish (Default)**: `https://andresserranodev.github.io/A-BookLandingPage/`
-- ** English**: `https://andresserranodev.github.io/A-BookLandingPage/en`
+- **Spanish(Default)**: `https://andresserranodev.github.io/A-BookLandingPage/`
+- **English**: `https://andresserranodev.github.io/A-BookLandingPage/en`
 
 ## Deployment
 
