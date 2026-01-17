@@ -1,22 +1,22 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import Navigation from '@/components/Navigation';
-import HeroSection from '@/components/HeroSection';
-import AboutBookSection from '@/components/AboutBookSection';
-import AboutAuthorSection from '@/components/AboutAuthorSection';
-import PreOrderSection from '@/components/PreOrderSection';
-import Footer from '@/components/Footer';
+import Layout from "@/layouts/Layout.astro";
+import Navigation from "@/components/Navigation";
+import HeroSection from "@/components/HeroSection.astro";
+import AboutBookSection from "@/components/AboutBookSection.astro";
+import AboutAuthorSection from "@/components/AboutAuthorSection.astro";
+import PreOrderSection from "@/components/PreOrderSection";
+import Footer from "@/components/Footer";
 ---
 
 <Layout title="Un Andrés Más | Book Launch" lang="en">
-	<div class="min-h-screen bg-background">
-		<Navigation client:load lang="en" />
-		<main>
-			<HeroSection client:load lang="en" />
-			<AboutBookSection client:visible lang="en" />
-			<AboutAuthorSection client:visible lang="en" />
-			<PreOrderSection client:visible lang="en" />
-		</main>
-		<Footer client:idle lang="en" />
-	</div>
+  <div class="min-h-screen bg-background">
+    <Navigation client:load lang="en" />
+    <main>
+      <HeroSection lang="en" />
+      <AboutBookSection lang="en" />
+      <AboutAuthorSection lang="en" />
+      <PreOrderSection client:visible lang="en" />
+    </main>
+    <Footer client:idle lang="en" />
+  </div>
 </Layout>

@@ -1,0 +1,130 @@
+---
+import { Image } from "astro:assets";
+import bookCover from "@/assets/book_cover.webp";
+import epubPreview from "@/assets/book_epub_preview.webp";
+
+const PREVIEW_IMAGES = [
+  {
+    sources: bookCover,
+    alt: "Portada del libro Un Andrés Más - Viaje en moto por Sudamérica desde Colombia hasta la Patagonia",
+    label: "Portada",
+  },
+  {
+    sources: epubPreview,
+    alt: "Vista interior del libro Un Andrés Más - Aventura en moto por la Patagonia y Sudamérica",
+    label: "Vista interior",
+  },
+];
+---
+
+<div
+  class="relative flex w-full max-w-xs flex-col items-center sm:max-w-sm"
+  data-carousel
+>
+  <div class="w-full overflow-hidden" data-testid="carousel-book-previews">
+    <div class="flex transition-transform duration-300" data-carousel-content>
+      {
+        PREVIEW_IMAGES.map((image, index) => (
+          <div class="min-w-full flex-shrink-0" data-carousel-item>
+            <div class="p-1">
+              <div class="relative aspect-[2/3] overflow-hidden rounded-lg bg-muted shadow-2xl">
+                <Image
+                  src={image.sources}
+                  alt={image.alt}
+                  class="h-full w-full object-cover"
+                  loading="eager"
+                  fetchpriority={index === 0 ? "high" : undefined}
+                  widths={[320, 384, 640, 768]}
+                  sizes="(min-width: 640px) 384px, 320px"
+                  data-testid={`img-preview-${index}`}
+                />
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="mt-6 flex items-center justify-center gap-4">
+    <button
+      data-carousel-prev
+      class="static inline-flex h-10 w-10 translate-y-0 items-center justify-center rounded-full border border-border bg-background/90 shadow-sm transition-all hover:bg-accent hover:text-accent-foreground"
+      aria-label="Previous slide"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="h-4 w-4"
+      >
+        <path d="m15 18-6-6 6-6"></path>
+      </svg>
+    </button>
+    <button
+      data-carousel-next
+      class="static inline-flex h-10 w-10 translate-y-0 items-center justify-center rounded-full border border-border bg-background/90 shadow-sm transition-all hover:bg-accent hover:text-accent-foreground"
+      aria-label="Next slide"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="h-4 w-4"
+      >
+        <path d="m9 18 6-6-6-6"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  function initCarousel() {
+    const carousels = document.querySelectorAll("[data-carousel]");
+
+    carousels.forEach((carousel) => {
+      const content = carousel.querySelector(
+        "[data-carousel-content]"
+      ) as HTMLElement;
+      const items = carousel.querySelectorAll("[data-carousel-item]");
+      const prevBtn = carousel.querySelector("[data-carousel-prev]");
+      const nextBtn = carousel.querySelector("[data-carousel-next]");
+
+      let currentIndex = 0;
+      const totalItems = items.length;
+
+      function updateCarousel() {
+        if (content) {
+          content.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+      }
+
+      prevBtn?.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateCarousel();
+      });
+
+      nextBtn?.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarousel();
+      });
+    });
+  }
+
+  // Initialize on page load
+  initCarousel();
+
+  // Re-initialize on view transitions (if using Astro view transitions)
+  document.addEventListener("astro:page-load", initCarousel);
+</script>

@@ -48,17 +48,13 @@ export default function Navigation({ lang }: NavigationProps) {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToTop();
-            }}
+          <button
+            onClick={scrollToTop}
             className={`font-serif text-lg font-bold transition-colors ${logoStyle}`}
             data-testid="link-logo"
           >
             {SITE_CONFIG.title}
-          </a>
+          </button>
 
           <div className="hidden items-center gap-6 md:flex">
             {NAV_SECTIONS.map((section) => (

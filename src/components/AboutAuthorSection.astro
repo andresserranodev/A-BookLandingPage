@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+import authorPhotos from "@/assets/author_photo.webp";
+import Section from "@/components/ui/section.astro";
+import SectionHeading from "@/components/ui/section-heading.astro";
+import { translations, type Language } from "@/lib/translations";
+
+interface Props {
+  lang?: Language;
+}
+
+const { lang = "es" } = Astro.props;
+const t = translations[lang];
+---
+
+<Section
+  id="author"
+  testId="section-about-author"
+  maxWidth="max-w-3xl"
+  background="bg-card"
+  centered
+>
+  <SectionHeading testId="text-author-heading" marginBottom="mb-8">
+    {t.aboutAuthor.heading}
+  </SectionHeading>
+
+  <div class="mx-auto mb-8 h-32 w-32 md:h-40 md:w-40">
+    <Image
+      src={authorPhotos}
+      alt="Andrés David Serrano - Author"
+      loading="lazy"
+      class="h-full w-full rounded-full border-4 border-border object-cover"
+      widths={[128, 160, 256, 320]}
+      sizes="(min-width: 768px) 160px, 128px"
+      data-testid="img-author-photo"
+    />
+  </div>
+
+  <div
+    class="space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg"
+  >
+    <p data-testid="text-author-bio-1">{t.aboutAuthor.bio1}</p>
+    <p
+      class="pt-4 text-sm font-medium italic text-foreground/80 md:text-base"
+      data-testid="text-author-attribution"
+    >
+      {t.aboutAuthor.attribution.split(":")[0]}:{" "}
+      <span class="font-serif font-bold">
+        {t.aboutAuthor.attribution.split(":")[1]}
+      </span>
+    </p>
+  </div>
+</Section>

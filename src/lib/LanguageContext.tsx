@@ -1,9 +1,4 @@
-import {
-  createContext,
-  useContext,
-  useState,
-  type ReactNode,
-} from "react";
+import { createContext, useContext, useState, type ReactNode } from "react";
 import { type Language, translations, type Translations } from "./translations";
 
 interface LanguageContextType {
@@ -16,10 +11,10 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
   undefined
 );
 
-export function LanguageProvider({ 
-  children, 
-  initialLanguage = "en" 
-}: { 
+export function LanguageProvider({
+  children,
+  initialLanguage = "en",
+}: {
   children: ReactNode;
   initialLanguage?: Language;
 }) {
@@ -29,8 +24,6 @@ export function LanguageProvider({
     setLanguageState(lang);
     // document.documentElement.lang is handled by Astro Layout
   };
-
-
 
   const t = translations[language];
 

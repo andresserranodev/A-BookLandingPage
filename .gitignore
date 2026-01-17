@@ -10,3 +10,6 @@ coverage
 # OS files
 .DS_Store
 **/.DS_Store
+
+# Astro local settings (metadata and cache)
+.astro/
