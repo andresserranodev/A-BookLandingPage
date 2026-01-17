@@ -1,6 +1,15 @@
-# Patagonia Pages - Astro Migration
+<div align="center">
+
+[![Deploy Status](https://github.com/andresserranodev/A-BookLandingPage/actions/workflows/deploy.yml/badge.svg)](https://github.com/andresserranodev/A-BookLandingPage/actions/workflows/deploy.yml)
+[![CodeFactor](https://www.codefactor.io/repository/github/andresserranodev/a-booklandingpage/badge/main)](https://www.codefactor.io/repository/github/andresserranodev/a-booklandingpage/overview/main)
+
+</div>
+
+# Patagonia Pages - Astro
 
 This project has been migrated from React to Astro. It is a multi-page application (MPA) that supports English and Spanish localization.
+
+This landing page was created to promote a self-published book about a motorcycle journey from Colombia to Patagonia. The project was developed using an AI-augmented development approach with **Claude Code** and **Google's AI development tools**
 
 ## Project Structure
 
