@@ -24,5 +24,6 @@ module.exports = {
     "src/**/*.{ts,tsx}",
     "!src/**/*.d.ts",
     "!src/**/*.astro",
+    "!src/components/icons/",
   ],
 };

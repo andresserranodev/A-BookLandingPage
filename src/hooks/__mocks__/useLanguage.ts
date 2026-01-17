@@ -30,7 +30,8 @@ const mockUseLanguage = jest.fn((lang?: Language) => ({
       bio: "Autor y aventurero",
     },
     footer: {
-      copyright: "Todos los derechos reservados",
+      tagline: "Una historia de aventura, descubrimiento y transformación",
+      copyright: "© 2025 Un Andrés Más",
     },
   },
 }));

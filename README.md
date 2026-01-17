@@ -2,6 +2,7 @@
 
 [![Deploy Status](https://github.com/andresserranodev/A-BookLandingPage/actions/workflows/deploy.yml/badge.svg)](https://github.com/andresserranodev/A-BookLandingPage/actions/workflows/deploy.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/andresserranodev/a-booklandingpage/badge/main)](https://www.codefactor.io/repository/github/andresserranodev/a-booklandingpage/overview/main)
+[![codecov](https://codecov.io/gh/andresserranodev/A-BookLandingPage/graph/badge.svg?token=EFQ1WK1I5S)](https://codecov.io/gh/andresserranodev/A-BookLandingPage)
 [![npm version](https://img.shields.io/badge/npm-1.0.0-blue.svg)](package.json)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen.svg)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/withastro/astro/blob/main/LICENSE)
