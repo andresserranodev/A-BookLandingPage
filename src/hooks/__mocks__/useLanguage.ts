@@ -31,7 +31,7 @@ const mockUseLanguage = jest.fn((lang?: Language) => ({
     },
     footer: {
       tagline: "Una historia de aventura, descubrimiento y transformación",
-      copyright: "© 2025 Un Andrés Más",
+      copyright: "© 2026 Andres Serrano Vivas",
     },
   },
 }));

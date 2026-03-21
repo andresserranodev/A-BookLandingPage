@@ -62,7 +62,7 @@ export const translations: Record<Language, Translations> = {
       statMiles: "Miles",
       statCountries: "Countries",
       statJourney: "Epic Journey",
-      available: "Available Spring 2024",
+      available: "Available April 2026",
     },
     aboutAuthor: {
       heading: "About the Author",
@@ -82,7 +82,7 @@ export const translations: Record<Language, Translations> = {
     },
     footer: {
       tagline: "A story of adventure, discovery, and transformation",
-      copyright: "© 2025 Un Andrés Más",
+      copyright: "© 2026 Andres Serrano Vivas",
     },
   },
   es: {
@@ -105,7 +105,7 @@ export const translations: Record<Language, Translations> = {
       statMiles: "Kilómetros",
       statCountries: "Países",
       statJourney: "Gran Aventura",
-      available: "Disponible Enero 2026",
+      available: "Disponible Abril 2026",
     },
     aboutAuthor: {
       heading: "Sobre el Autor",
@@ -125,7 +125,7 @@ export const translations: Record<Language, Translations> = {
     },
     footer: {
       tagline: "Una historia de aventura, descubrimiento y transformación",
-      copyright: "© 2025 Un Andrés Más",
+      copyright: "© 2026 Andres Serrano Vivas",
     },
   },
 };
