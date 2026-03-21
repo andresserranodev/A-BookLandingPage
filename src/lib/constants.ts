@@ -31,7 +31,7 @@ export const NAV_SECTIONS = [
 export const JOURNEY_STATS: Record<Language, { distance: string }> & {
   countries: number;
 } = {
-  en: { distance: "15,000" },
-  es: { distance: "24,000" },
+  en: { distance: "6,835" },
+  es: { distance: "11.000" },
   countries: 7,
 };
