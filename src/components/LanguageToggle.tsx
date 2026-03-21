@@ -14,7 +14,6 @@ export default function LanguageToggle({
 }: LanguageToggleProps) {
   const { language } = useLanguage(lang);
 
-  // Base path handling for GitHub Pages or root
   const base = getBaseUrl() === "/" ? "" : getBaseUrl();
   const targetUrl = language === "es" ? `${base}/en` : `${base}/`;
 

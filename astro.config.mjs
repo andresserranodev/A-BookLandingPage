@@ -5,7 +5,7 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   site: process.env.NODE_ENV === 'production' ? "https://andresserranodev.github.io" : undefined,
-  base: process.env.NODE_ENV === 'production' ? "/A-BookLandingPage" : undefined,
+  base: process.env.NODE_ENV === 'production' ? "/BookLanding" : undefined,
   integrations: [react(), tailwind()],
   vite: {
     build: {
