@@ -16,14 +16,14 @@ describe("useTranslations", () => {
     const result = useTranslations("en");
     expect(result.nav.aboutBook).toBe("About the Book");
     expect(result.nav.author).toBe("Author");
-    expect(result.nav.preorder).toBe("Pre-order");
+    expect(result.nav.preorder).toBe("Buy the Book");
   });
 
   it("returns correct nav translations for Spanish", () => {
     const result = useTranslations("es");
     expect(result.nav.aboutBook).toBe("Sobre el Libro");
     expect(result.nav.author).toBe("Autor");
-    expect(result.nav.preorder).toBe("Pre-ordenar");
+    expect(result.nav.preorder).toBe("Comprar el Libro");
   });
 
   it("returns correct hero section translations for English", () => {
