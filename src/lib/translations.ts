@@ -46,12 +46,12 @@ export const translations: Record<Language, Translations> = {
     nav: {
       aboutBook: "About the Book",
       author: "Author",
-      preorder: "Pre-order",
+      preorder: "Buy the Book",
     },
     hero: {
       title: "Un Andrés Más",
       subtitle: "A Motorcycle Journey from Colombia to Patagonia",
-      preorderButton: "Pre-order Now",
+      preorderButton: "Get Your Copy",
     },
     aboutBook: {
       heading: "About the Book",
@@ -62,7 +62,7 @@ export const translations: Record<Language, Translations> = {
       statMiles: "Miles",
       statCountries: "Countries",
       statJourney: "Epic Journey",
-      available: "Available April 2026",
+      available: "Available Now",
     },
     aboutAuthor: {
       heading: "About the Author",
@@ -70,15 +70,16 @@ export const translations: Record<Language, Translations> = {
       attribution: "Written by: Carolina Florez",
     },
     preorder: {
-      heading: "Reserve Your Copy",
+      heading: "Get Your Copy",
       description:
-        "Be the first to embark on this journey. Sign up for exclusive pre-order access and receive a special discount when the book launches.",
+        "Embark on this journey. Order your copy today and start reading about the adventure.",
       emailPlaceholder: "Enter your email",
-      joinButton: "Join Waitlist",
-      joiningButton: "Joining...",
-      waitlistCount: "Join 500+ readers already on the waitlist",
-      successTitle: "You're on the list!",
-      successDescription: "We'll notify you when pre-orders open.",
+      joinButton: "Order Now",
+      joiningButton: "Processing...",
+      waitlistCount:
+        "Join hundreds of readers who have already started the journey",
+      successTitle: "Thank you!",
+      successDescription: "We will contact you shortly regarding your order.",
     },
     footer: {
       tagline: "A story of adventure, discovery, and transformation",
@@ -89,12 +90,12 @@ export const translations: Record<Language, Translations> = {
     nav: {
       aboutBook: "Sobre el Libro",
       author: "Autor",
-      preorder: "Pre-ordenar",
+      preorder: "Comprar el Libro",
     },
     hero: {
       title: "Un Andrés Más",
       subtitle: "Un Viaje en Moto desde Colombia hasta la Patagonia",
-      preorderButton: "Reservar ahora",
+      preorderButton: "Adquirir ahora",
     },
     aboutBook: {
       heading: "Sobre el Libro",
@@ -105,7 +106,7 @@ export const translations: Record<Language, Translations> = {
       statMiles: "Kilómetros",
       statCountries: "Países",
       statJourney: "Gran Aventura",
-      available: "Disponible Abril 2026",
+      available: "Disponible Ahora",
     },
     aboutAuthor: {
       heading: "Sobre el Autor",
@@ -113,15 +114,17 @@ export const translations: Record<Language, Translations> = {
       attribution: "Escrito por: Carolina Florez",
     },
     preorder: {
-      heading: "Reserva Tu Copia",
+      heading: "Adquiere Tu Copia",
       description:
-        "Sé el primero en embarcarte en este viaje. Regístrate para acceso exclusivo de pre-orden y recibe un descuento especial cuando se lance el libro.",
+        "Embarcate en este viaje. Pide tu copia hoy y comienza a leer sobre esta gran aventura.",
       emailPlaceholder: "Ingresa tu email",
-      joinButton: "Unirse a la Lista",
-      joiningButton: "Uniéndose...",
-      waitlistCount: "Únete a más de 500 lectores en la lista de espera",
-      successTitle: "¡Estás en la lista!",
-      successDescription: "Te notificaremos cuando abran las pre-órdenes.",
+      joinButton: "Comprar Ahora",
+      joiningButton: "Procesando...",
+      waitlistCount:
+        "Únete a cientos de lectores que ya han comenzado el viaje",
+      successTitle: "¡Gracias!",
+      successDescription:
+        "Nos pondremos en contacto contigo pronto sobre tu orden.",
     },
     footer: {
       tagline: "Una historia de aventura, descubrimiento y transformación",
