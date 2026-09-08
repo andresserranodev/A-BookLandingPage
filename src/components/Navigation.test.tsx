@@ -1,6 +1,7 @@
 import { render, screen, fireEvent, act } from "@testing-library/react";
 import Navigation from "./Navigation";
 import { NAV_SECTIONS, SITE_CONFIG } from "@/lib/constants";
+import { translations } from "@/lib/translations";
 
 // Mock the hooks
 jest.mock("@/hooks/useLanguage");
@@ -83,11 +84,13 @@ describe("Navigation", () => {
     render(<Navigation />);
 
     expect(screen.getByTestId("link-nav-about")).toHaveTextContent(
-      "Sobre el libro"
+      translations.es.nav.aboutBook
     );
-    expect(screen.getByTestId("link-nav-author")).toHaveTextContent("Autor");
+    expect(screen.getByTestId("link-nav-author")).toHaveTextContent(
+      translations.es.nav.author
+    );
     expect(screen.getByTestId("link-nav-preorder")).toHaveTextContent(
-      "Pre-orden"
+      translations.es.nav.preorder
     );
   });
 
