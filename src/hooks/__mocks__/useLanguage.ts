@@ -5,9 +5,9 @@ const mockUseLanguage = jest.fn((lang?: Language) => ({
   language: lang || "es",
   t: {
     nav: {
-      aboutBook: "Sobre el Libro",
+      aboutBook: "Sobre el libro",
       author: "Autor",
-      preorder: "Pre-orden",
+      preorder: "Comprar el libro",
     },
     preorder: {
       heading: "Únete a la lista de espera",
@@ -35,7 +35,7 @@ const mockUseLanguage = jest.fn((lang?: Language) => ({
     },
     footer: {
       tagline: "Una historia de aventura, descubrimiento y transformación",
-      copyright: "© 2026 Andres Serrano Vivas",
+      copyright: "© 2026 Andrés Serrano Vivas",
     },
   },
 }));

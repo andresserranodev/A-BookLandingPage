@@ -21,9 +21,9 @@ describe("useTranslations", () => {
 
   it("returns correct nav translations for Spanish", () => {
     const result = useTranslations("es");
-    expect(result.nav.aboutBook).toBe("Sobre el Libro");
+    expect(result.nav.aboutBook).toBe("Sobre el libro");
     expect(result.nav.author).toBe("Autor");
-    expect(result.nav.preorder).toBe("Comprar el Libro");
+    expect(result.nav.preorder).toBe("Comprar el libro");
   });
 
   it("returns correct hero section translations for English", () => {
@@ -38,7 +38,7 @@ describe("useTranslations", () => {
     const result = useTranslations("es");
     expect(result.hero.title).toBe("Un Andrés Más");
     expect(result.hero.subtitle).toBe(
-      "Un Viaje en Moto desde Colombia hasta la Patagonia"
+      "Un viaje en moto desde Colombia hasta la Patagonia"
     );
   });
 });

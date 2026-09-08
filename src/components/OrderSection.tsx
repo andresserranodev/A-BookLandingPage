@@ -12,7 +12,13 @@ export default function OrderSection({ lang }: OrderSectionProps) {
   const { t } = useLanguage(lang);
 
   return (
-    <Section id="order" testId="section-order" maxWidth="max-w-2xl" centered>
+    <Section
+      id="order"
+      testId="section-order"
+      maxWidth="max-w-2xl"
+      background="bg-card"
+      centered
+    >
       <SectionHeading testId="text-order-heading" marginBottom="mb-4">
         {t.preorder.heading}
       </SectionHeading>

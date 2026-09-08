@@ -26,7 +26,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={cn(background, "py-16 md:py-24 lg:py-32")}
+      className={cn(background, "py-12 md:py-16 lg:py-20")}
       data-testid={testId}
     >
       <div

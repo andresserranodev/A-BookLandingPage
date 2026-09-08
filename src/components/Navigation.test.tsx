@@ -83,7 +83,7 @@ describe("Navigation", () => {
     render(<Navigation />);
 
     expect(screen.getByTestId("link-nav-about")).toHaveTextContent(
-      "Sobre el Libro"
+      "Sobre el libro"
     );
     expect(screen.getByTestId("link-nav-author")).toHaveTextContent("Autor");
     expect(screen.getByTestId("link-nav-preorder")).toHaveTextContent(
