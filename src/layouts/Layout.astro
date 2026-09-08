@@ -68,7 +68,7 @@ const base =
     <meta property="og:locale" content={lang === "es" ? "es_CO" : "en_US"} />
   </head>
   <body>
-    <script define:vars={{ lang }}>
+    <script is:inline define:vars={{ lang }}>
       window.__ASTRO_LANG__ = lang;
     </script>
     <slot />
