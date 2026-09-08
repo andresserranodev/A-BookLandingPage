@@ -6,20 +6,8 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   site: process.env.NODE_ENV === 'production' ? "https://andresserranodev.github.io" : undefined,
   base: process.env.NODE_ENV === 'production' ? "/BookLanding" : undefined,
-  integrations: [react(), tailwind()],
-  vite: {
-    build: {
-      // Improve code splitting
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            // Separate React runtime
-            'react-vendor': ['react', 'react-dom'],
-            // Separate carousel (only loads when needed)
-            'carousel': ['embla-carousel-react'],
-          },
-        },
-      },
-    },
+  build: {
+    inlineStylesheets: 'always',
   },
+  integrations: [react(), tailwind()],
 });

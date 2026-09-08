@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Section, SectionHeading } from "@/components/ui/section";
@@ -21,16 +21,11 @@ function ReviewCard({
   seeLessText: string;
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isCollapsible, setIsCollapsible] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    // Determine if it should be collapsible. A rough estimate for 5 lines is ~250 chars.
-    const totalLength = texts.reduce((acc, text) => acc + text.length, 0);
-    if (totalLength > 250 || texts.length > 2) {
-      setIsCollapsible(true);
-    }
-  }, [texts]);
+  // Determine if it should be collapsible. A rough estimate for 5 lines is ~250 chars.
+  const isCollapsible =
+    texts.reduce((acc, text) => acc + text.length, 0) > 250 || texts.length > 2;
 
   return (
     <Card className="flex h-full flex-col">
