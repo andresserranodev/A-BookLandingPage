@@ -4,18 +4,18 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection.astro";
 import AboutBookSection from "@/components/AboutBookSection.astro";
 import AboutAuthorSection from "@/components/AboutAuthorSection.astro";
-import PreOrderSection from "@/components/PreOrderSection";
+import OrderSection from "@/components/OrderSection";
 import Footer from "@/components/Footer";
 ---
 
 <Layout title="Libro Un Andrés Más | Preventa Oficial" lang="es">
-  <div class="min-h-screen bg-background">
+  <div class="min-h-screen bg-background pb-32">
     <Navigation client:load lang="es" />
     <main>
       <HeroSection lang="es" />
       <AboutBookSection lang="es" />
       <AboutAuthorSection lang="es" />
-      <PreOrderSection client:visible lang="es" />
+      <OrderSection client:visible lang="es" />
     </main>
     <Footer client:idle lang="es" />
   </div>

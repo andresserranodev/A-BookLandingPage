@@ -10,6 +10,8 @@ export interface Translations {
     title: string;
     subtitle: string;
     preorderButton: string;
+    buttonColombia: string;
+    buttonOtherCountries: string;
   };
   aboutBook: {
     heading: string;
@@ -34,6 +36,8 @@ export interface Translations {
     waitlistCount: string;
     successTitle: string;
     successDescription: string;
+    buttonColombia: string;
+    buttonOtherCountries: string;
   };
   footer: {
     tagline: string;
@@ -52,6 +56,8 @@ export const translations: Record<Language, Translations> = {
       title: "Un Andrés Más",
       subtitle: "A Motorcycle Journey from Colombia to Patagonia",
       preorderButton: "Get Your Copy",
+      buttonColombia: "Order in Colombia",
+      buttonOtherCountries: "Other Countries",
     },
     aboutBook: {
       heading: "About the Book",
@@ -80,6 +86,8 @@ export const translations: Record<Language, Translations> = {
         "Join hundreds of readers who have already started the journey",
       successTitle: "Thank you!",
       successDescription: "We will contact you shortly regarding your order.",
+      buttonColombia: "Order in Colombia",
+      buttonOtherCountries: "Other Countries",
     },
     footer: {
       tagline: "A story of adventure, discovery, and transformation",
@@ -96,6 +104,8 @@ export const translations: Record<Language, Translations> = {
       title: "Un Andrés Más",
       subtitle: "Un Viaje en Moto desde Colombia hasta la Patagonia",
       preorderButton: "Adquirir ahora",
+      buttonColombia: "Pídelo en Colombia",
+      buttonOtherCountries: "Otros Países",
     },
     aboutBook: {
       heading: "Sobre el Libro",
@@ -125,6 +135,8 @@ export const translations: Record<Language, Translations> = {
       successTitle: "¡Gracias!",
       successDescription:
         "Nos pondremos en contacto contigo pronto sobre tu orden.",
+      buttonColombia: "Pídelo en Colombia",
+      buttonOtherCountries: "Otros Países",
     },
     footer: {
       tagline: "Una historia de aventura, descubrimiento y transformación",

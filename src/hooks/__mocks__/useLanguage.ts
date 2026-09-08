@@ -15,11 +15,15 @@ const mockUseLanguage = jest.fn((lang?: Language) => ({
         "Regístrate para recibir actualizaciones exclusivas y ser de los primeros en obtener tu copia cuando esté disponible.",
       joinButton: "Unirme a la lista",
       waitlistCount: "Más de 100 personas ya están esperando",
+      buttonColombia: "Pídelo en Colombia",
+      buttonOtherCountries: "Otros Países",
     },
     hero: {
       title: "Un viaje en moto",
       subtitle: "De Colombia a la Patagonia",
       cta: "Descubre la historia",
+      buttonColombia: "Pídelo en Colombia",
+      buttonOtherCountries: "Otros Países",
     },
     about: {
       title: "Sobre el libro",
